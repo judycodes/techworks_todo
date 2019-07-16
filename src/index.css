@@ -24,7 +24,9 @@ body {
   text-align: center;
   border-radius: 10px;
   margin-bottom: 40px;
+  
 }
+
 
 .parts {
   display:flex;
@@ -38,7 +40,10 @@ body {
   background-color: rgba(174, 168, 211, 0.4);
 }
 
-
+label {
+  font-style: italic;
+  color: rgb(150, 54, 148);
+}
 
 .list {
   display:flex;
