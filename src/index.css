@@ -1,6 +1,6 @@
 body {
   margin:0;
-  background-color: rgba(115, 101, 152, 0.5);
+  background-color: rgba(115, 101, 152, 0.2);
   font-family: sans-serif;
   font-size: 1.3rem;
   color: rgb(142, 68, 173);
@@ -31,11 +31,11 @@ body {
   flex-direction:column;
   justify-content: center;
   align-items: center;
-  margin: 200px;
+  margin: 100px;
   border-radius: 10px;
   border: 1px solid #000;
   padding:30px;
-  background-color: rgba(174, 168, 211, 1);
+  background-color: rgba(174, 168, 211, 0.4);
 }
 
 
@@ -50,11 +50,12 @@ body {
 
 li {
   display:flex;
+  margin-bottom: 5px;
   
 }
 
 input {
-  padding:5px;
+  padding:10px 5px;
   margin-right: 10px;
 }
 

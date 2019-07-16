@@ -1,24 +1,25 @@
 import React, { Component } from 'react'
 
-class ToDoTask extends Component {
-
-
-    render(){
+    const ToDoTask = (props) => {
+        
+        const todo = props.todo
         return(
-            <ul className = "list"> 
-                <li>
-                    <input type="checkbox" />
-                    {this.props.todo.task}
-
-                    <div className ="btnGroup">
-                        <button type="button"> Delete Task </button>
-                        <button type = "button">Edit Task</button>
-                    </div>
-                    
-                </li>
-            </ul>
-        )
+                 
+                    <li>
+                        <input type="checkbox" />
+                        {todo.task}
+    
+                        <div className ="btnGroup">
+                            <button type="button"> Delete Task </button>
+                            <button type = "button">Edit Task</button>
+                        </div>
+                        
+                    </li>
+            
+            )
+        
     }
-}
+    
+
 
 export default ToDoTask;
