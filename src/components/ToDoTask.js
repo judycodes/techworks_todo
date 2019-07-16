@@ -5,7 +5,7 @@ import React, { Component } from 'react'
         
 
         const todo = props.todo
-        console.log('todo in ToDoTask: ', todo.task)
+        console.log('todo in ToDoTask: ', todo.task) 
         return(
                  
                     <li>
