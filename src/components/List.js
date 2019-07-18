@@ -8,35 +8,40 @@ class ToDoList extends Component {
           todos: [
             {
                 task: "Study",
-                completed: false
+                completed: false,
+                edit: false
               }, 
               {
                 task: "Make and pack lunch",
-                completed: false 
+                completed: false,
+                edit: false 
               },
       
                {
                 task: "Get to QCC",
-                completed: false 
+                completed: false,
+                edit: false 
               },
       
                {
                 task: "Read up on current tech",
-                completed: false
+                completed: false,
+                edit: false
               },
       
                {
                 task: "Git commit all code",
-                completed: false
+                completed: false,
+                edit: false
               }
           ],
               
           currentToDo: {
             task: "",
-            completed: false
+            completed: false,
+            edit: false
           },
 
-          id: 0
           }
         }
       
@@ -99,7 +104,7 @@ class ToDoList extends Component {
           <ul className = "list">
             {this.state.todos.map((todo, index) => { //.map allows two parameters, (in this case one task from todos list/array) element and index {gives an automatic index value which is later set to id attribute}
                 return (
-                <ToDoTask todo = {todo} id= {index} delete = {this.deleteTask} edit = {this.editTask}/> )}) 
+                <ToDoTask todo = {todo} key = {index} id= {index} delete = {this.deleteTask} edit = {this.editTask}/> )}) 
             }
           </ul>
         
