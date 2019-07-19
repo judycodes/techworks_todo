@@ -11,7 +11,8 @@ import React from 'react'
             output = (
                 <div>
                     <form>
-                        <input type="text" defaultValue ={props.todo.edit}/>
+                        <input className = "editInput" type="text" defaultValue ={props.todo.task}/>
+                        <button type="button">Save</button>
                     </form>
                 </div>
             )
@@ -19,7 +20,7 @@ import React from 'react'
            output = (
             <li>
                 <input type="checkbox" /> 
-                {/* above creates a checkbox for completing and uncompleted tasks */}
+                {/* above creates a checkbox for styling completing and uncompleted tasks */}
                         
                 {todo.task} 
 

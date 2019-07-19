@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import ToDoTask from './ToDoTask';
 
 class ToDoList extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
           todos: [
             {
@@ -92,25 +92,24 @@ class ToDoList extends Component {
     render(){
         
 
-        return(<div className = "container">
-        <div className = "parts" >
-          <h1 className= "title">To Do List</h1>
-          <form className = "form" onSubmit = {this.addTask}>
-            <label htmlFor = "taskName">Task Name: </label>
-            <input onChange = {this.handleChange} name = "taskName" type = "text" placeholder = " Add Your Next Task Here!" />
-            <button type = "submit">Add Task</button>
-          </form>
+        return(
+        <div className = "container">
+          <div className = "parts" >
+            <h1 className= "title">To Do List</h1>
+              <form className = "form" onSubmit = {this.addTask}>
+                <label htmlFor = "taskName">Task Name: </label>
+                  <input onChange = {this.handleChange} name = "taskName" type = "text" placeholder = " Add Your Next Task Here!" />
+                  <button type = "submit">Add Task</button>
+              </form>
 
-          <ul className = "list">
-            {this.state.todos.map((todo, index) => { //.map allows two parameters, (in this case one task from todos list/array) element and index {gives an automatic index value which is later set to id attribute}
+            <ul className = "list">
+              {this.state.todos.map((todo, index) => { //.map allows two parameters, (in this case one task from todos list/array) element and index {gives an automatic index value which is later set to id attribute}
                 return (
                 <ToDoTask todo = {todo} key = {index} id= {index} delete = {this.deleteTask} edit = {this.editTask}/> )}) 
             }
-          </ul>
-        
-       </div>
-      </div> 
-        
+            </ul>
+          </div>
+        </div>  
       );
                   
        

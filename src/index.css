@@ -68,3 +68,8 @@ button {
   margin-left: 10px;
   font-variant: small-caps;
 }
+
+.editInput {
+  margin-left: 35px;
+  padding: 8px;
+}
