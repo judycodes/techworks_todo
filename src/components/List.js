@@ -55,13 +55,34 @@ class ToDoList extends Component {
           //console.log('this.state.todos after filtering', this.state.todos) // shows todos content leftover after deleting specific task
     }
 
+        editTask = (id, editedTaskName) => {
+          
+          const updatedTodos = this.state.todos.map((task, todosId) => { //creates a new array containing the edited task data
+            
+            if(todosId === id) { //if the id from the handleUpdate event matches the task id 
+              return {...task, taskName : editedTaskName} //overwrites the taskName's original value to be the editedTaskName
+            }
+          
+            return task; //all the other tasks are returned unedited
+          })
+          
+          if(editedTaskName === undefined || editedTaskName === "") { //prevents changes to taskName if save button is pressed without any changes or is an empty string
+            return this.state.todos;
+          } else { //if taskName is changed, the todos array will be updated with the new array, updatedTodos
+            this.setState({
+              todos: updatedTodos //reassigns todos to be the new array with the edited data
+            }) 
+          }
+          //console.log(editedTaskName, 'editedTaskName passed in editTask method') 
+
+        }
+         
         
-      
-      
 //=======[RENDER]============      
     render(){
 
-
+      //console.log(this.state.todos, 'todos array, useful for checking changes from edit and delete')
+      
         const todos = this.state.todos.map((todo, index) => { 
         //.map allows two parameters, (in this case, one task/todo from the todos list/array) an element and an index {.map gives an automatic index value which is later set to id attribute}
         //mapping the todos array returns a ToDoTask component to represent each task in the todos array and provides an index for each task. 
@@ -69,12 +90,13 @@ class ToDoList extends Component {
        
         return (
         <ToDoTask 
-          todo = {todo} 
-          key = {index} 
-          id= {index} 
-          delete = {this.deleteTask} 
-          edit = {this.editTask}
+          todo = {todo} //allows access to each todo object(task) in todos array
+          key = {index} //resolves warning: Each child in a list should have a unique "key" prop.
+          id= {index} //provides id for each task, which is needed for deleting and editing tasks
+          delete = {this.deleteTask} //allows access to deleteTask method 
+          edit = {this.editTask} //allows access to editTask method
           /> )
+
       }) 
      
         return(
@@ -93,7 +115,7 @@ class ToDoList extends Component {
             <ul className = "list">
               
               {todos} 
-              {/* variable containing the mapped todos, lines 89-102 */}
+              {/* variable containing the mapped todos, lines 86-100 */}
 
             </ul>
           
