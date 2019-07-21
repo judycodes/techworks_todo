@@ -5,6 +5,7 @@ body {
   font-size: 1.3rem;
   color: rgb(142, 68, 173);
   overflow: hidden;
+  font-variant: small-caps;
 }
 
 .container {
@@ -16,7 +17,6 @@ body {
 
 .title {
   font-size: 30px;
-  font-variant: small-caps;
   background-color: rgba(213, 184, 255, 1);
   color: rgb(150, 54, 148);
   padding: 10px;
@@ -26,7 +26,6 @@ body {
   margin-bottom: 40px;
   
 }
-
 
 .parts {
   display:flex;
@@ -72,4 +71,9 @@ button {
 .editInput {
   margin-left: 35px;
   padding: 8px;
+}
+
+.completedStyle {
+  color: #000;
+  text-decoration: line-through; 
 }
