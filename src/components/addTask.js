@@ -31,7 +31,7 @@ class AddTaskForm extends Component {
 //=======[RENDER]============    
     render() {
         return (
-            <form className = "form" onSubmit = {this.handleSubmit}>
+            <form className = "addForm" onSubmit = {this.handleSubmit}>
                 <label htmlFor = "taskName">Task To Do: </label>
                   <input 
                     name = "taskName" 
@@ -40,8 +40,8 @@ class AddTaskForm extends Component {
                     value = {this.state.taskName} 
                     onChange = {this.handleChange} //captures changes in input  
                     type = "text" 
-                    placeholder = " Add Your Next Task Here!" />
-                  <button type = "submit">Add Task To List</button>
+                    placeholder = " Type Your Next Task Here!" />
+                  <button type = "submit">Add Task</button>
               </form>
         )
     } 

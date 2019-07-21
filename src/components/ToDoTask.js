@@ -45,7 +45,7 @@ class ToDoTask extends Component {
         if(this.state.editingMode) { //if the editingMode property is true, then the edit form will appear and allow user to edit the input of the task already stored in todos array
             output = (
                 <div>
-                    <form onSubmit = {this.handleUpdate}>
+                    <form className = "editForm" onSubmit = {this.handleUpdate}>
                         <input 
                             className = "editInput" 
                             type = "text" 
@@ -74,12 +74,12 @@ class ToDoTask extends Component {
                         <button 
                             type="button" 
                             onClick={this.props.delete} 
-                            id={this.props.id}>Delete Task
+                            id={this.props.id}>Delete
                         </button>
                         
                         <button 
                             type = "button" 
-                            onClick={this.editingModeInput}>Edit Task
+                            onClick={this.editingModeInput}>Edit
                         </button> 
                     </div>
                     {/* provides each task with a set of delete and edit button to trigger events */}

@@ -1,47 +1,60 @@
 body {
   margin:0;
   background-color: rgba(115, 101, 152, 0.2);
-  font-family: sans-serif;
+  background-image: url("./nightdesk.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: top right;
+  font-family: 'Asap', sans-serif;
   font-size: 1.3rem;
-  color: rgb(142, 68, 173);
-  overflow: hidden;
+  color: #fff;
   font-variant: small-caps;
-}
-
-.container {
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
+  text-shadow: 1px 0px #000;
+  text-align-last: center;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
+  height: 100vh;
 }
 
 .title {
-  font-size: 30px;
-  background-color: rgba(213, 184, 255, 1);
-  color: rgb(150, 54, 148);
-  padding: 10px;
+  font-size: 38px;
+  border-bottom: 1px dotted rgb(234, 200, 162);
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 2.5px;
+  padding-bottom: 10px;
   width:100%;
   text-align: center;
-  border-radius: 10px;
-  margin-bottom: 40px;
-  
+  margin-top: 0;
+}
+
+.container {
+  padding-right: 100px;
 }
 
 .parts {
   display:flex;
   flex-direction:column;
-  justify-content: center;
-  align-items: center;
-  margin: 100px;
+  justify-content: space-around;
   border-radius: 10px;
-  border: 1px solid #000;
-  padding:30px;
-  background-color: rgba(174, 168, 211, 0.4);
+  padding:10px;
+  background-color: rgba(226, 209, 190, 0.3);
 }
 
+.addForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px dotted rgb(234, 200, 162);
+  padding: 0px 20px 20px;
+  margin: 10px 20px;
+}
+
+
 label {
-  font-style: italic;
-  color: rgb(150, 54, 148);
+  color: #fff;
+  font-size: 25px;
 }
 
 .list {
@@ -54,8 +67,10 @@ label {
 
 li {
   display:flex;
-  margin-bottom: 5px;
-  
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 20px;
+  padding: 5px;
 }
 
 input {
@@ -66,14 +81,34 @@ input {
 button {
   margin-left: 10px;
   font-variant: small-caps;
+  border-radius: 2px;
+  border: none;
+}
+
+button:focus {
+  outline:0;
 }
 
 .editInput {
   margin-left: 35px;
-  padding: 8px;
+  padding: 5px;
 }
 
 .completedStyle {
-  color: #000;
+  color: rgba(211, 211, 211, 0.5);
   text-decoration: line-through; 
+  font-size:19px;
 }
+
+@media only screen and (max-device-width : 480px) {
+
+ .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .container {
+   padding: 5px;
+ }
+  }

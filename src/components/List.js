@@ -10,11 +10,11 @@ class ToDoList extends Component {
     this.state = { 
       todos: [ //tasks already in todo list
         {
-          taskName : "Code",
+          taskName : "Wait for tonight",
           completed : false,
         },
         {
-          taskName : "Practice",
+          taskName : "Try to take over the world",
           completed : false,  
         },
         {
