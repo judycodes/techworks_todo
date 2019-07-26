@@ -13,7 +13,9 @@ class AddTaskForm extends Component {
 //=======[EVENTS]============    
     handleChange = event => { //captures the event data from input
         this.setState({
-          [event.target.name] : event.target.value, //sets new value to taskName, using object literal syntax
+          [event.target.name] : event.target.value, //sets new value to taskName
+          //event.target.name refers to name attribute in input and that name attribute value is named specifically taskName to match the taskName state property
+          //event.target.value is the value from the input change that occurs, which is then assigned to taskName (which had been an empty string)
           completed: false //input is given this key and value, since this is a new task to be added to the list and is automatically not completed as of yet
         }); 
       };
